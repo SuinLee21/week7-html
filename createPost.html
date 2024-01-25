@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createPost</title>
+    <link rel="stylesheet" type="text/css" href="../../css/7weeks/createPost.css">
+</head>
+
+<body>
+    <form action="../../jspAction/7weeks/createPostAction.jsp" class="createPostForm"
+        onsubmit="return contentsCheckEvent()">
+        <textarea class="createPostFormChild" placeholder="제목" name="title" id="title"></textarea>
+        <textarea class="createPostFormChild createTextareaContent" placeholder="내용" name="contents"
+            id="contents"></textarea>
+        <input type="submit" value="작성">
+    </form>
+
+    <script src="../../js/7weeks/checkValidity.js"></script>
+</body>
+
+</html>

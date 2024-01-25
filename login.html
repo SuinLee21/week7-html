@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../../css/7weeks/login.css">
+</head>
+
+<body>
+    <form action="../../jspAction/7weeks/loginAction.jsp" class="loginForm"
+        onsubmit="return checkValidityEvent({id:true, pw:true})">
+        <input type="text" class="loginFormChild" id="userId" placeholder="아이디(영어만 4~12)" name="userId">
+        <input type="password" class="loginFormChild" id="userPw" placeholder="비밀번호(앞글자 영어, 한글제외 8~12)" name="userPw">
+        <input type="submit" class="loginFormChild" value="로그인">
+        <a href="findId.html" class="loginFormButtom">아이디 찾기</a>
+        <a href="findPw.html" class="loginFormButtom buttonRight">비밀번호 찾기</a>
+    </form>
+
+    <script src="../../js/7weeks/checkValidity.js"></script>
+</body>
+
+</html>

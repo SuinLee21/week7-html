@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindPw</title>
+    <link rel="stylesheet" type="text/css" href="../../css/7weeks/findPw.css">
+</head>
+
+<body>
+    <form action="../../jspAction/7weeks/findPwAction.jsp" class="findIdForm"
+        onsubmit="return checkValidityEvent({id:true, name:true, birth:true, phoneNum:true})">
+        <input type="text" class="findIdFormChild" id="userId" placeholder="아이디(영어만 4~12)" name="userId">
+        <input type="text" class="findIdFormChild" id="userName" placeholder="이름(한글(2글자 이상))" name="userName">
+        <input type="text" class="findIdFormChild" id="userBirth" placeholder="생년월일(8자리, -포함해서)" name="userBirth">
+        <input type="text" class="findIdFormChild" id="userPhoneNum" placeholder="전화번호(-없이)" name="userPhoneNum">
+        <input type="submit" class="findIdFormChild" value="비밀번호 찾기">
+    </form>
+
+    <script src="../../js/7weeks/checkValidity.js"></script>
+</body>
+
+</html>

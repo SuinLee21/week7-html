@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" type="text/css" href="../../css/7weeks/signUp.css">
+</head>
+
+<body>
+    <form action="../../jspAction/7weeks/signUpAction.jsp" class="signUpForm"
+        onsubmit="return checkValidityEvent({id:true, pw:true, name:true, birth:true, phoneNum:true})">
+        <input type="text" class="signUpFormChild" placeholder="아이디(영어만 4~12)" name="userId" id="userId">
+        <input type="password" class="signUpFormChild" placeholder="비밀번호(앞글자 영어, 한글제외 8~12)" name="userPw" id="userPw">
+        <input type="text" class="signUpFormChild" placeholder="이름(한글(2글자 이상))" name="userName" id="userName">
+        <input type="text" class="signUpFormChild" placeholder="생년월일(8자리, -포함해서)" name="userBirth" id="userBirth">
+        <input type="text" class="signUpFormChild" placeholder="전화번호(-없이)" name="userPhoneNum" id="userPhoneNum">
+        <input type="submit" class="signUpFormChild" value="회원가입">
+    </form>
+
+    <button onclick="check()">아이디 체크</button>
+    <button onclick="see()">사륜안</button>
+
+    <script src="../../js/7weeks/checkValidity.js"></script>
+    <script>
+        function check() {
+            var id = document.getElementById('userId');
+            window.open(`../../jspAction/7weeks/checkIdAction.jsp?checkId=${id.value}`, "_blank", "width=500, height=500");
+        }
+        function see() {
+            var pw = document.getElementById('userPw');
+
+            console.log(pw.type)
+            if (pw.type === "text") {
+                pw.type = "password";
+                console.log('1번')
+            }
+            if (pw.type === "password") {
+                pw.type = "text";
+                console.log('2번')
+            }
+        }
+    </script>
+</body>
+
+</html>
